@@ -38,45 +38,39 @@
             color: var(--primary-purple);
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem; /* Reduced margin */
             line-height: 1;
         }
 
-        /* Main Header Background - UPDATED for Image Background */
+        /* Main Header Background - UPDATED for Strip Layering */
         .main-header {
             position: relative;
             /* Path to your uploaded image in the template folder */
             background-image: url('images/template/vinuni-landscape.jpg');
             background-size: cover;
             background-position: center;
-            padding: 3rem 2rem; /* Increased padding */
-            border-radius: 0.375rem;
+            /* Increased height to show image above/below strip */
+            min-height: 350px; 
+            display: flex;
+            align-items: center; /* Vertically center the strip */
+            padding: 0; /* Remove padding so strip touches edges */
+            border-radius: 0; /* Removed rounded corners for full width feel */
             margin-bottom: 2rem;
-            color: white; /* Switch text to white for contrast */
             overflow: hidden;
         }
 
-        /* Overlay to make text readable on top of the image */
-        .main-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 51, 204, 0.75); /* Blue overlay with opacity */
-            z-index: 1;
-        }
-
-        /* Ensure content sits on top of overlay */
-        .main-header > * {
-            position: relative;
-            z-index: 2;
+        /* New Class: Full Width Strip Wrapper */
+        .header-text-box {
+            width: 100%;
+            background-color: rgba(0, 30, 60, 0.75); /* Dark semi-transparent strip */
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(2px);
         }
 
         .conference-title {
             color: white;
-            font-size: 2.5rem; /* Slightly larger */
+            font-size: 2.5rem;
             font-weight: 700;
             line-height: 1.2;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
@@ -102,7 +96,7 @@
             font-size: 1rem;
             font-weight: 500;
             color: var(--primary-blue);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.25rem; /* Reduced margin */
             padding: 0.5rem;
             border-radius: 0.25rem;
             transition: background-color 0.2s, color 0.2s;
@@ -126,7 +120,7 @@
         
         /* List Styling */
         .styled-list li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.25rem; /* Reduced margin */
         }
         
         /* Map Container */
@@ -151,9 +145,9 @@
         .sponsor-grid {
             display: flex; /* Changed to flex for better centering of 2 items */
             justify-content: center;
-            gap: 3rem;
+            gap: 1.5rem; /* Reduced gap */
             align-items: center;
-            margin-top: 1rem;
+            margin-top: 0.5rem; /* Reduced margin */
             flex-wrap: wrap;
         }
         .sponsor-img {
@@ -184,16 +178,19 @@
 </head>
 <body class="bg-white text-gray-700">
 
-    <div class="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">
+    <!-- Removed max-w-7xl to span full width, keeping some horizontal padding -->
+    <div class="w-full px-4 sm:px-6 lg:px-8">
         
         <!-- Main Header: Conference Details -->
-        <header class="main-header">
-            <h1 class="conference-title">LOSF 2026</h1>
-            <h2 class="conference-subtitle">Learning and Optimization for a Sustainable Future</h2>
-            <div class="conference-meta">
-                <i class="fa-regular fa-calendar mr-2"></i> July 1-3, 2026 <br class="sm:hidden">
-                <span class="hidden sm:inline mx-2">|</span>
-                <i class="fa-solid fa-location-dot mr-2"></i> VinUniversity, Hanoi, Vietnam
+        <header class="main-header -mx-4 sm:-mx-6 lg:-mx-8"> <!-- Negative margins to touch edges if needed -->
+            <div class="header-text-box">
+                <h1 class="conference-title">LOSF 2026</h1>
+                <h2 class="conference-subtitle">Learning and Optimization for a Sustainable Future</h2>
+                <div class="conference-meta">
+                    <i class="fa-regular fa-calendar mr-2"></i> July 1-3, 2026 <br class="sm:hidden">
+                    <span class="hidden sm:inline mx-2">|</span>
+                    <i class="fa-solid fa-location-dot mr-2"></i> VinUniversity, Hanoi, Vietnam
+                </div>
             </div>
         </header>
 
@@ -235,14 +232,14 @@
             <main class="flex-1">
 
                 <!-- Home Section (Formerly Coordinates) -->
-                <section id="home" class="mb-12">
+                <section id="home" class="mb-8"> <!-- Reduced margin bottom -->
                     <h2 class="section-title">Home</h2>
                     
-                    <div class="space-y-8">
+                    <div class="space-y-4"> <!-- Reduced spacing between blocks -->
                         <!-- Dates & Venue -->
-                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Event Details</h3>
-                            <ul class="space-y-3">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100"> <!-- Reduced padding -->
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Event Details</h3> <!-- Reduced margin -->
+                            <ul class="space-y-1"> <!-- Tightened list spacing -->
                                 <li class="flex items-start">
                                     <i class="fa-regular fa-clock mt-1 w-6 text-blue-700"></i>
                                     <div>
@@ -267,8 +264,8 @@
                         <!-- Conference Topics -->
                         <div>
                             <h3 class="section-title text-xl">Topics</h3>
-                            <p class="mb-3">This year's conference focuses on the following key areas:</p>
-                            <ul class="list-disc list-inside space-y-2 pl-2 bg-gray-50 p-4 rounded-lg">
+                            <p class="mb-2">This year's conference focuses on the following key areas:</p>
+                            <ul class="list-disc list-inside space-y-1 pl-2 bg-gray-50 p-3 rounded-lg"> <!-- Tightened list -->
                                 <li>Large-Scale Learning and Optimization for Sustainable Systems</li>
                                 <li>Machine Learning for Climate and Earth Systems Modeling</li>
                                 <li>Robust and Efficient Learning in Resource-Constrained Environments</li>
@@ -282,7 +279,7 @@
                             <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
                                 <ul class="divide-y divide-gray-200">
                                     <!-- Organizer 1: Laurent El Ghaoui -->
-                                    <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center"> <!-- Reduced padding -->
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
                                                 <i class="fa-solid fa-user"></i>
@@ -296,7 +293,7 @@
                                         </div>
                                     </li>
                                     <!-- Organizer 2: Binh T. Nguyen -->
-                                    <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
                                                 <i class="fa-solid fa-user"></i>
@@ -310,7 +307,7 @@
                                         </div>
                                     </li>
                                     <!-- Organizer 3: Hong T.M. Chu -->
-                                    <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
                                                 <i class="fa-solid fa-user"></i>
@@ -324,7 +321,7 @@
                                         </div>
                                     </li>
                                     <!-- Organizer 4: Nguyen Hoang Bao Tram -->
-                                    <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
                                                 <i class="fa-solid fa-user"></i>
@@ -338,7 +335,7 @@
                                         </div>
                                     </li>
                                     <!-- Organizer 5: Mai Anh Linh -->
-                                    <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
                                                 <i class="fa-solid fa-user"></i>
@@ -358,7 +355,7 @@
                         <!-- Sponsors -->
                         <div>
                             <h3 class="section-title text-xl">Sponsors</h3>
-                            <p class="mb-4 text-center">We gratefully acknowledge the support from our sponsors:</p>
+                            <p class="mb-2 text-center">We gratefully acknowledge the support from our sponsors:</p>
                             <div class="sponsor-grid">
                                 <!-- VinUni Logo -->
                                 <div class="text-center">
@@ -375,50 +372,50 @@
                         <div>
                             <h3 class="section-title text-xl">Location Map</h3>
                             <div class="map-container">
-                                <!-- Embed for VinUniversity -->
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.589695665952!2d105.95499777611458!3d20.994052288450234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac2d65714165%3A0x4f694437b11d887e!2sVinUniversity!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <!-- Embed for VinUniversity specifically pinning the location -->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7449.179391331904!2d105.955!3d20.9940523!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac2d65714165%3A0x4f694437b11d887e!2sVinUniversity!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Program Section (New) -->
-                <section id="program" class="mb-12 hidden">
+                <section id="program" class="mb-8 hidden">
                     <h2 class="section-title">Program</h2>
-                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-10 text-center">
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
                         <i class="fa-regular fa-calendar-days text-4xl text-gray-300 mb-4"></i>
                         <p class="text-gray-500 text-lg">The detailed program schedule will be announced later.</p>
                     </div>
                 </section>
 
                 <!-- Registration Section (New) -->
-                <section id="registration" class="mb-12 hidden">
+                <section id="registration" class="mb-8 hidden">
                     <h2 class="section-title">Registration</h2>
-                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-10 text-center">
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
                         <i class="fa-solid fa-ticket text-4xl text-gray-300 mb-4"></i>
                         <p class="text-gray-500 text-lg">Registration information will be available soon.</p>
                     </div>
                 </section>
 
                 <!-- Accommodation Section (New) -->
-                <section id="accommodation" class="mb-12 hidden">
+                <section id="accommodation" class="mb-8 hidden">
                     <h2 class="section-title">Accommodation</h2>
-                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-10 text-center">
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
                         <i class="fa-solid fa-hotel text-4xl text-gray-300 mb-4"></i>
                         <p class="text-gray-500 text-lg">Information regarding accommodation and recommended hotels will be posted shortly.</p>
                     </div>
                 </section>
 
                 <!-- Participants Section -->
-                <section id="participants" class="mb-12 hidden">
+                <section id="participants" class="mb-8 hidden">
                     <h2 class="section-title">Confirmed Participants</h2>
-                    <p class="mb-6">We are honored to host the following distinguished speakers and participants:</p>
+                    <p class="mb-4">We are honored to host the following distinguished speakers and participants:</p>
                     
                     <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
                         <ul class="divide-y divide-gray-200">
                             
                             <!-- Stephen P. Boyd -->
-                            <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
                                         <i class="fa-solid fa-user"></i>
@@ -435,7 +432,7 @@
                             </li>
 
                             <!-- Nitesh V. Chawla -->
-                            <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
                                         <i class="fa-solid fa-user"></i>
@@ -452,7 +449,7 @@
                             </li>
 
                             <!-- Sebastian Pokutta -->
-                            <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
                                         <i class="fa-solid fa-user"></i>
@@ -469,7 +466,7 @@
                             </li>
 
                             <!-- Melvyn Sim -->
-                            <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
                                         <i class="fa-solid fa-user"></i>
@@ -486,7 +483,7 @@
                             </li>
 
                             <!-- Yong-Sheng Soh -->
-                            <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
                                         <i class="fa-solid fa-user"></i>
@@ -503,7 +500,7 @@
                             </li>
 
                             <!-- Masashi Sugiyama -->
-                            <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
                                         <i class="fa-solid fa-user"></i>
@@ -520,7 +517,7 @@
                             </li>
 
                             <!-- Yinyu Ye -->
-                            <li class="p-4 hover:bg-gray-50 transition flex items-center">
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
                                         <i class="fa-solid fa-user"></i>
@@ -541,19 +538,19 @@
                 </section>
 
                 <!-- Contacts Section -->
-                <section id="contacts" class="mb-12 hidden">
+                <section id="contacts" class="mb-8 hidden">
                     <h2 class="section-title">Organizing Committee Contacts</h2>
                     
                     <div class="grid md:grid-cols-2 gap-6">
                         
                         <!-- Academic Inquiries -->
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-purple-200 pb-2">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 border-b border-purple-200 pb-2">
                                 <i class="fa-solid fa-graduation-cap mr-2 text-purple-700"></i>Academic Inquiries
                             </h3>
-                            <div class="space-y-4">
+                            <div class="space-y-2">
                                 <!-- Contact Card -->
-                                <div class="bg-white p-4 rounded shadow-sm border border-gray-100">
+                                <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                     <p class="font-bold text-blue-800">Binh T. Nguyen</p>
                                     <a href="mailto:binh.nt2@vinuni.edu.vn" class="text-sm text-gray-600 hover:text-blue-600 block mt-1">
                                         <i class="fa-solid fa-envelope mr-1"></i> binh.nt2@vinuni.edu.vn
@@ -561,7 +558,7 @@
                                 </div>
 
                                 <!-- Contact Card -->
-                                <div class="bg-white p-4 rounded shadow-sm border border-gray-100">
+                                <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                     <p class="font-bold text-blue-800">Hong T. M. Chu</p>
                                     <a href="mailto:hong.ctm@vinuni.edu.vn" class="text-sm text-gray-600 hover:text-blue-600 block mt-1">
                                         <i class="fa-solid fa-envelope mr-1"></i> hong.ctm@vinuni.edu.vn
@@ -572,12 +569,12 @@
 
                         <!-- Administrative Support -->
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-purple-200 pb-2">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 border-b border-purple-200 pb-2">
                                 <i class="fa-solid fa-clipboard-list mr-2 text-purple-700"></i>Administrative Support
                             </h3>
-                            <div class="space-y-4">
+                            <div class="space-y-2">
                                 <!-- Contact Card -->
-                                <div class="bg-white p-4 rounded shadow-sm border border-gray-100">
+                                <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                     <p class="font-bold text-blue-800">Nguyen Hoang Bao Tram</p>
                                     <a href="mailto:tram.nhb@vinuni.edu.vn" class="text-sm text-gray-600 hover:text-blue-600 block mt-1">
                                         <i class="fa-solid fa-envelope mr-1"></i> tram.nhb@vinuni.edu.vn
@@ -585,7 +582,7 @@
                                 </div>
                                 
                                 <!-- Contact Card -->
-                                <div class="bg-white p-4 rounded shadow-sm border border-gray-100">
+                                <div class="bg-white p-3 rounded shadow-sm border border-gray-100">
                                     <p class="font-bold text-blue-800">Mai Anh Linh</p>
                                     <a href="mailto:linh.ma@vinuni.edu.vn" class="text-sm text-gray-600 hover:text-blue-600 block mt-1">
                                         <i class="fa-solid fa-envelope mr-1"></i> linh.ma@vinuni.edu.vn
@@ -598,7 +595,7 @@
                 </section>
 
                 <!-- Footer -->
-                <footer class="mt-16 border-t border-gray-200 pt-8">
+                <footer class="mt-12 border-t border-gray-200 pt-6">
                     <div class="text-center text-sm text-gray-500">
                         <p>&copy; <span id="year">2026</span> LOSF Conference. All rights reserved.</p>
                         <p class="mt-2">Hosted at <a href="https://vinuni.edu.vn/" target="_blank" class="text-blue-600 hover:underline">VinUniversity</a></p>
