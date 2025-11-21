@@ -200,8 +200,9 @@
                     <a href="#home" class="sidebar-link active" id="link-home">
                         <i class="fa-solid fa-house w-6"></i> Home
                     </a>
-                    <a href="#participants" class="sidebar-link" id="link-participants">
-                        <i class="fa-solid fa-users w-6"></i> Participants
+                    <!-- SWAPPED: Changed from Participants to Organizers -->
+                    <a href="#organizers" class="sidebar-link" id="link-organizers">
+                        <i class="fa-solid fa-users w-6"></i> Organizers
                     </a>
                     <a href="#program" class="sidebar-link" id="link-program">
                         <i class="fa-regular fa-calendar-days w-6"></i> Program
@@ -229,7 +230,7 @@
             <!-- Main Content Area -->
             <main class="flex-1">
 
-                <!-- Home Section (Formerly Coordinates) -->
+                <!-- Home Section -->
                 <section id="home" class="mb-8"> <!-- Reduced margin bottom -->
                     <h2 class="section-title">Home</h2>
                     
@@ -271,26 +272,15 @@
                             </ul>
                         </div>
 
-                        <!-- Organizers -->
+                        <!-- SWAPPED: Participants moved here (formerly Organizers) -->
                         <div>
-                            <h3 class="section-title text-xl">Organizers</h3>
+                            <h3 class="section-title text-xl">Confirmed Participants</h3>
+                            <p class="mb-4">We are honored to host the following distinguished speakers and participants:</p>
+                            
                             <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
                                 <ul class="divide-y divide-gray-200">
-                                    <!-- Organizer 1: Laurent El Ghaoui -->
-                                    <li class="p-3 hover:bg-gray-50 transition flex items-center"> <!-- Reduced padding -->
-                                        <div class="flex-shrink-0 mr-4">
-                                            <div class="profile-icon">
-                                                <i class="fa-solid fa-user"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="text-lg font-bold">
-                                                <a href="https://vinuni.edu.vn/people/laurent-el-ghaoui-phd-2/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Laurent El Ghaoui</a>
-                                            </div>
-                                            <p class="text-gray-600 text-sm">VinUniversity</p>
-                                        </div>
-                                    </li>
-                                    <!-- Organizer 2: Binh T. Nguyen -->
+                                    
+                                    <!-- Stephen P. Boyd -->
                                     <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
@@ -299,12 +289,15 @@
                                         </div>
                                         <div>
                                             <div class="text-lg font-bold">
-                                                <a href="https://tbng.github.io/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Binh T. Nguyen</a>
+                                                <a href="https://web.stanford.edu/~boyd/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Stephen P. Boyd</a>
                                             </div>
-                                            <p class="text-gray-600 text-sm">VinUniversity</p>
+                                            <p class="text-gray-600 text-sm">
+                                                Stanford University
+                                            </p>
                                         </div>
                                     </li>
-                                    <!-- Organizer 3: Hong T.M. Chu -->
+
+                                    <!-- Nitesh V. Chawla -->
                                     <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
@@ -313,12 +306,15 @@
                                         </div>
                                         <div>
                                             <div class="text-lg font-bold">
-                                                <a href="https://hongtmchu.github.io/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Hong T.M. Chu</a>
+                                                <a href="https://niteshchawla.nd.edu/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Nitesh V. Chawla</a>
                                             </div>
-                                            <p class="text-gray-600 text-sm">VinUniversity</p>
+                                            <p class="text-gray-600 text-sm">
+                                                University of Notre Dame
+                                            </p>
                                         </div>
                                     </li>
-                                    <!-- Organizer 4: Nguyen Hoang Bao Tram -->
+
+                                    <!-- Sebastian Pokutta -->
                                     <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
@@ -326,13 +322,16 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="text-lg font-bold text-gray-900">
-                                                Nguyen Hoang Bao Tram
+                                            <div class="text-lg font-bold">
+                                                <a href="https://pokutta.com/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Sebastian Pokutta</a>
                                             </div>
-                                            <p class="text-gray-600 text-sm">VinUniversity</p>
+                                            <p class="text-gray-600 text-sm">
+                                                Zuse Institute Berlin (ZIB)
+                                            </p>
                                         </div>
                                     </li>
-                                    <!-- Organizer 5: Mai Anh Linh -->
+
+                                    <!-- Melvyn Sim -->
                                     <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                         <div class="flex-shrink-0 mr-4">
                                             <div class="profile-icon">
@@ -340,12 +339,66 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="text-lg font-bold text-gray-900">
-                                                Mai Anh Linh
+                                            <div class="text-lg font-bold">
+                                                <a href="https://iora.nus.edu.sg/people-p/melvyn-sim/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Melvyn Sim</a>
                                             </div>
-                                            <p class="text-gray-600 text-sm">VinUniversity</p>
+                                            <p class="text-gray-600 text-sm">
+                                                National University of Singapore
+                                            </p>
                                         </div>
                                     </li>
+
+                                    <!-- Yong-Sheng Soh -->
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center">
+                                        <div class="flex-shrink-0 mr-4">
+                                            <div class="profile-icon">
+                                                <i class="fa-solid fa-user"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-lg font-bold">
+                                                <a href="https://yssoh.github.io/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Yong-Sheng Soh</a>
+                                            </div>
+                                            <p class="text-gray-600 text-sm">
+                                                National University of Singapore
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Masashi Sugiyama -->
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center">
+                                        <div class="flex-shrink-0 mr-4">
+                                            <div class="profile-icon">
+                                                <i class="fa-solid fa-user"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-lg font-bold">
+                                                <a href="https://www.ms.k.u-tokyo.ac.jp/sugi/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Masashi Sugiyama</a>
+                                            </div>
+                                            <p class="text-gray-600 text-sm">
+                                                The University of Tokyo
+                                            </p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Yinyu Ye -->
+                                    <li class="p-3 hover:bg-gray-50 transition flex items-center">
+                                        <div class="flex-shrink-0 mr-4">
+                                            <div class="profile-icon">
+                                                <i class="fa-solid fa-user"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="text-lg font-bold">
+                                                <a href="https://web.stanford.edu/~yyye/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Yinyu Ye</a>
+                                            </div>
+                                            <p class="text-gray-600 text-sm">
+                                                Stanford University
+                                            </p>
+                                        </div>
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -377,7 +430,7 @@
                     </div>
                 </section>
 
-                <!-- Program Section (New) -->
+                <!-- Program Section -->
                 <section id="program" class="mb-8 hidden">
                     <h2 class="section-title">Program</h2>
                     <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
@@ -386,7 +439,7 @@
                     </div>
                 </section>
 
-                <!-- Registration Section (New) -->
+                <!-- Registration Section -->
                 <section id="registration" class="mb-8 hidden">
                     <h2 class="section-title">Registration</h2>
                     <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
@@ -395,7 +448,7 @@
                     </div>
                 </section>
 
-                <!-- Accommodation Section (New) -->
+                <!-- Accommodation Section -->
                 <section id="accommodation" class="mb-8 hidden">
                     <h2 class="section-title">Accommodation</h2>
                     <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
@@ -404,15 +457,26 @@
                     </div>
                 </section>
 
-                <!-- Participants Section -->
-                <section id="participants" class="mb-8 hidden">
-                    <h2 class="section-title">Confirmed Participants</h2>
-                    <p class="mb-4">We are honored to host the following distinguished speakers and participants:</p>
-                    
+                <!-- SWAPPED: Organizers Section (Formerly Participants) -->
+                <section id="organizers" class="mb-8 hidden">
+                    <h2 class="section-title">Organizers</h2>
                     <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
                         <ul class="divide-y divide-gray-200">
-                            
-                            <!-- Stephen P. Boyd -->
+                            <!-- Organizer 1: Laurent El Ghaoui -->
+                            <li class="p-3 hover:bg-gray-50 transition flex items-center"> <!-- Reduced padding -->
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="profile-icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold">
+                                        <a href="https://vinuni.edu.vn/people/laurent-el-ghaoui-phd-2/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Laurent El Ghaoui</a>
+                                    </div>
+                                    <p class="text-gray-600 text-sm">VinUniversity</p>
+                                </div>
+                            </li>
+                            <!-- Organizer 2: Binh T. Nguyen -->
                             <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
@@ -421,15 +485,12 @@
                                 </div>
                                 <div>
                                     <div class="text-lg font-bold">
-                                        <a href="https://web.stanford.edu/~boyd/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Stephen P. Boyd</a>
+                                        <a href="https://tbng.github.io/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Binh T. Nguyen</a>
                                     </div>
-                                    <p class="text-gray-600 text-sm">
-                                        Stanford University
-                                    </p>
+                                    <p class="text-gray-600 text-sm">VinUniversity</p>
                                 </div>
                             </li>
-
-                            <!-- Nitesh V. Chawla -->
+                            <!-- Organizer 3: Hong T.M. Chu -->
                             <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
@@ -438,15 +499,12 @@
                                 </div>
                                 <div>
                                     <div class="text-lg font-bold">
-                                        <a href="https://niteshchawla.nd.edu/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Nitesh V. Chawla</a>
+                                        <a href="https://hongtmchu.github.io/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Hong T.M. Chu</a>
                                     </div>
-                                    <p class="text-gray-600 text-sm">
-                                        University of Notre Dame
-                                    </p>
+                                    <p class="text-gray-600 text-sm">VinUniversity</p>
                                 </div>
                             </li>
-
-                            <!-- Sebastian Pokutta -->
+                            <!-- Organizer 4: Nguyen Hoang Bao Tram -->
                             <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
@@ -454,16 +512,13 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="text-lg font-bold">
-                                        <a href="https://pokutta.com/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Sebastian Pokutta</a>
+                                    <div class="text-lg font-bold text-gray-900">
+                                        Nguyen Hoang Bao Tram
                                     </div>
-                                    <p class="text-gray-600 text-sm">
-                                        Zuse Institute Berlin (ZIB)
-                                    </p>
+                                    <p class="text-gray-600 text-sm">VinUniversity</p>
                                 </div>
                             </li>
-
-                            <!-- Melvyn Sim -->
+                            <!-- Organizer 5: Mai Anh Linh -->
                             <li class="p-3 hover:bg-gray-50 transition flex items-center">
                                 <div class="flex-shrink-0 mr-4">
                                     <div class="profile-icon">
@@ -471,66 +526,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="text-lg font-bold">
-                                        <a href="https://iora.nus.edu.sg/people-p/melvyn-sim/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Melvyn Sim</a>
+                                    <div class="text-lg font-bold text-gray-900">
+                                        Mai Anh Linh
                                     </div>
-                                    <p class="text-gray-600 text-sm">
-                                        National University of Singapore
-                                    </p>
+                                    <p class="text-gray-600 text-sm">VinUniversity</p>
                                 </div>
                             </li>
-
-                            <!-- Yong-Sheng Soh -->
-                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
-                                <div class="flex-shrink-0 mr-4">
-                                    <div class="profile-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="text-lg font-bold">
-                                        <a href="https://yssoh.github.io/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Yong-Sheng Soh</a>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">
-                                        National University of Singapore
-                                    </p>
-                                </div>
-                            </li>
-
-                            <!-- Masashi Sugiyama -->
-                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
-                                <div class="flex-shrink-0 mr-4">
-                                    <div class="profile-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="text-lg font-bold">
-                                        <a href="https://www.ms.k.u-tokyo.ac.jp/sugi/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Masashi Sugiyama</a>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">
-                                        The University of Tokyo
-                                    </p>
-                                </div>
-                            </li>
-
-                            <!-- Yinyu Ye -->
-                            <li class="p-3 hover:bg-gray-50 transition flex items-center">
-                                <div class="flex-shrink-0 mr-4">
-                                    <div class="profile-icon">
-                                        <i class="fa-solid fa-user"></i>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="text-lg font-bold">
-                                        <a href="https://web.stanford.edu/~yyye/" target="_blank" class="text-gray-900 hover:text-blue-700 transition-colors">Yinyu Ye</a>
-                                    </div>
-                                    <p class="text-gray-600 text-sm">
-                                        Stanford University
-                                    </p>
-                                </div>
-                            </li>
-
                         </ul>
                     </div>
                 </section>
@@ -647,7 +648,7 @@
         
         // Initial Load
         document.addEventListener('DOMContentLoaded', () => {
-             // Check URL hash for deep linking (e.g., index.html#participants)
+             // Check URL hash for deep linking
              const hash = window.location.hash.substring(1);
              if (hash && document.getElementById(hash)) {
                  showSection(hash);
